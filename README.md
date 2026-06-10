@@ -1,5 +1,7 @@
 # 🌦️ Sistema de Previsão Climática com Dados do INMET
 
+Integrantes: Gabriel Andrade Ferreira, Leonardo Dias dos Santos, Matheus Oliveira, Pedro Henrique Batista dos Santos
+
 Sistema desenvolvido em **Python** para leitura, processamento e previsão climática utilizando arquivos históricos do **INMET (Instituto Nacional de Meteorologia)**.
 
 O software permite carregar arquivos meteorológicos `.csv`, identificar automaticamente informações da estação meteorológica e realizar consultas por **cidade** e **data futura** através de uma interface gráfica simples.
