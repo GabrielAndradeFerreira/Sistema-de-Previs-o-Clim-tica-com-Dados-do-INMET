@@ -1,65 +1,79 @@
-# Sistema-de-Previs-o-Clim-tica-com-Dados-do-INMET
-Sistema desenvolvido em Python para leitura, processamento e previsão climática utilizando arquivos históricos do INMET (Instituto Nacional de Meteorologia).
+# 🌦️ Sistema de Previsão Climática com Dados do INMET
 
-O software permite carregar arquivos meteorológicos .csv, identificar automaticamente informações da estação meteorológica e realizar consultas por cidade e data futura através de uma interface gráfica simples.
+Sistema desenvolvido em **Python** para leitura, processamento e previsão climática utilizando arquivos históricos do **INMET (Instituto Nacional de Meteorologia)**.
 
-A previsão é exibida em um painel contendo:
+O software permite carregar arquivos meteorológicos `.csv`, identificar automaticamente informações da estação meteorológica e realizar consultas por **cidade** e **data futura** através de uma interface gráfica simples.
 
-Temperatura prevista;
-Umidade prevista;
-Pressão atmosférica;
-Velocidade do vento;
-Probabilidade de chuva;
-Correlação dominante;
-Método utilizado;
-Confiabilidade estimada.
-📌 Tecnologias Utilizadas
-Python 3
-Tkinter (Interface gráfica)
-CSV (Leitura de arquivos)
-Datetime (Manipulação de datas)
-OS (Manipulação de diretórios)
-Sem uso de bibliotecas externas
+A previsão é exibida contendo:
 
-Este projeto não utiliza bibliotecas de Machine Learning, Estatística ou Álgebra Linear prontas.
+* Temperatura prevista
+* Umidade prevista
+* Pressão atmosférica
+* Velocidade do vento
+* Probabilidade de chuva
+* Correlação dominante
+* Método utilizado
+* Confiabilidade estimada
+
+---
+
+## 📌 Tecnologias Utilizadas
+
+* Python 3
+* Tkinter (Interface gráfica)
+* CSV (Leitura de arquivos)
+* Datetime (Manipulação de datas)
+* OS (Manipulação de diretórios)
+
+### Sem uso de bibliotecas externas
+
+Este projeto **não utiliza bibliotecas de Machine Learning, Estatística ou Álgebra Linear prontas**.
 
 Não são utilizados:
 
-NumPy
-Pandas
-Scikit-Learn
-TensorFlow
-PyTorch
-StatsModels
+* NumPy
+* Pandas
+* Scikit-Learn
+* TensorFlow
+* PyTorch
+* StatsModels
 
 Todos os cálculos estatísticos e matemáticos são implementados manualmente.
 
-📊 Métodos Estatísticos Implementados
+---
 
-O sistema utiliza implementações próprias de:
+## 📊 Métodos Estatísticos Implementados
 
-Média
-Mediana
-Moda
-Variância
-Desvio padrão
-Covariância
-Correlação de Pearson
-Cohen's d
-Regressão Linear Simples
-Média Móvel
-Suavização de Tendência
-Cálculo Probabilístico Baseado em Histórico Climático
-🔍 Metodologia de Previsão
+* Média
+* Mediana
+* Moda
+* Variância
+* Desvio padrão
+* Covariância
+* Correlação de Pearson
+* Cohen's d
+* Regressão Linear Simples
+* Média Móvel
+* Suavização de Tendência
+* Cálculo Probabilístico Baseado em Histórico Climático
 
-A previsão climática é calculada combinando:
+---
 
-Média sazonal histórica
-Regressão linear manual
-Média móvel
-Frequência histórica de chuva
-Correlação entre umidade e precipitação
-📁 Estrutura do Projeto
+## 🔍 Metodologia de Previsão
+
+A previsão climática combina:
+
+1. Média sazonal histórica
+2. Regressão linear manual
+3. Média móvel
+4. Frequência histórica de chuva
+5. Correlação entre umidade e precipitação
+
+---
+
+## 📁 Estrutura do Projeto
+
+```text
 Projeto_Machine_Learning
 │
 ├── main.py
@@ -79,134 +93,182 @@ Projeto_Machine_Learning
         ├── arquivo_inmet_1.csv
         ├── arquivo_inmet_2.csv
         └── arquivo_inmet_3.csv
-📄 Formato dos Arquivos Aceitos
+```
+
+---
+
+## 📄 Formato dos Arquivos Aceitos
 
 O sistema aceita arquivos:
 
+```text
 .csv
+```
 
 Os arquivos devem seguir o padrão de exportação do INMET contendo informações como:
 
-Estação
-Código da estação
-UF
-Região
-Latitude
-Longitude
-Altitude
-Data
-Hora UTC
-Precipitação
-Pressão
-Temperatura
-Umidade
-Vento
-Radiação
-Exemplo de arquivo válido
+* Estação
+* Código da estação
+* UF
+* Região
+* Latitude
+* Longitude
+* Altitude
+* Data
+* Hora UTC
+* Precipitação
+* Pressão
+* Temperatura
+* Umidade
+* Vento
+* Radiação
+
+### Exemplo de arquivo válido
+
+```text
 INMET_S_RS_B846_NONOAI_01-01-2026_A_30-04-2026.CSV
+```
 
-São aceitas extensões:
+Extensões aceitas:
 
+```text
 .CSV
 .csv
-📂 Onde Colocar os Arquivos CSV
+```
+
+---
+
+## 📂 Onde Colocar os Arquivos CSV
 
 Os arquivos do INMET devem ser colocados em:
 
+```text
 data/uploads
+```
 
 Exemplo:
 
+```text
 Projeto_Machine_Learning/data/uploads/INMET_S_RS_B846_NONOAI_01-01-2026_A_30-04-2026.CSV
+```
 
 Caso a pasta não exista, o sistema tentará criá-la automaticamente.
 
-📦 Dependências
+---
+
+## 📦 Dependências
 
 O projeto utiliza apenas bibliotecas padrão do Python.
 
-Bibliotecas utilizadas
+```python
 os
 csv
 json
 datetime
 tkinter
 unicodedata
+```
 
-Normalmente todas já acompanham a instalação do Python.
+---
 
-🖥️ Verificando o Tkinter
+## 🖥️ Verificando o Tkinter
 
-Em instalações padrão do Python para Windows, o Tkinter já vem instalado.
+Para verificar se o Tkinter está disponível:
 
-Para verificar:
-
+```bash
 python -m tkinter
+```
 
-Se abrir uma pequena janela de teste, o Tkinter está funcionando corretamente.
+Se abrir uma janela de teste, está tudo funcionando corretamente.
 
-🚀 Instalação
-1. Instale o Python
+---
 
-Baixe em:
+## 🚀 Instalação
 
+### 1. Instale o Python
+
+Download:
+
+```text
 https://www.python.org/downloads/
+```
 
-Durante a instalação no Windows, marque:
+Durante a instalação, marque:
 
+```text
 Add Python to PATH
-2. Clone ou Baixe o Projeto
+```
 
-Exemplo:
+### 2. Clone ou Baixe o Projeto
 
+```text
 C:\Users\SeuUsuario\Desktop\Projeto_Machine_Learning
-3. Crie a Pasta de Uploads
+```
+
+### 3. Crie a Pasta de Uploads
+
+```text
 Projeto_Machine_Learning/data/uploads
-4. Adicione os Arquivos do INMET
+```
 
-Copie os arquivos .csv para:
+### 4. Adicione os Arquivos do INMET
 
+Copie os arquivos `.csv` para:
+
+```text
 data/uploads
+```
 
-Exemplo:
+---
 
-data/uploads/INMET_S_RS_B846_NONOAI_01-01-2026_A_30-04-2026.CSV
-▶️ Como Executar
+## ▶️ Como Executar
 
 Abra o terminal na pasta do projeto:
 
+```bash
 cd C:\Users\SeuUsuario\Desktop\Projeto_Machine_Learning
+```
 
 Execute:
 
+```bash
 python main.py
+```
 
 Ou:
 
+```bash
 C:\Users\SeuUsuario\AppData\Local\Python\python.exe main.py
+```
 
-Exemplo de ambiente:
+---
 
-& C:\Users\I010523\AppData\Local\Python\pythoncore-3.14-64\python.exe main.py
-🧭 Como Utilizar
+## 🧭 Como Utilizar
 
 Ao iniciar o sistema será exibida uma interface gráfica contendo:
 
-Cidade
-Data futura
-Resultado da previsão
-Exemplo
+* Cidade
+* Data futura
+* Resultado da previsão
+
+### Exemplo
+
+```text
 Cidade: NONOAI
 Data futura: 2027-06-15
+```
 
 Clique em:
 
+```text
 Consultar previsão
+```
 
-O sistema localizará os dados da cidade nos arquivos presentes em:
+---
 
-data/uploads
-📈 Exemplo de Resultado
+## 📈 Exemplo de Resultado
+
+```text
 Local consultado:
 NONOAI/RS
 
@@ -242,62 +304,86 @@ regressao_linear_manual + media_movel + frequencia_historica
 
 Confiabilidade estimada:
 68.4 %
-⚠️ Cidade Não Encontrada
+```
 
-Caso a cidade informada não seja encontrada nos arquivos carregados, será exibida a mensagem:
+---
 
+## ⚠️ Cidade Não Encontrada
+
+Caso a cidade informada não seja encontrada:
+
+```text
 Nenhum arquivo correspondente à cidade informada foi encontrado.
+```
 
-Além disso, a interface apresentará um aviso ao usuário.
+Um aviso também será exibido na interface gráfica.
 
-📌 Observações Sobre a Previsão
+---
 
-A previsão gerada é baseada exclusivamente em dados históricos disponíveis nos arquivos carregados.
+## 📌 Observações Sobre a Previsão
 
-A qualidade da previsão depende de fatores como:
+A previsão é baseada exclusivamente nos dados históricos disponíveis.
 
-Quantidade de dados disponíveis;
-Número de anos analisados;
-Integridade dos registros;
-Ausência de falhas no CSV;
-Representatividade da estação meteorológica.
-Recomendações
+A qualidade dos resultados depende de:
 
-Para melhores resultados:
+* Quantidade de dados disponíveis
+* Número de anos analisados
+* Integridade dos registros
+* Ausência de falhas no CSV
+* Representatividade da estação meteorológica
 
-Utilizar vários anos de dados;
-Utilizar múltiplas estações próximas;
-Evitar arquivos com lacunas extensas;
-Utilizar registros completos de temperatura, umidade, pressão e precipitação.
-⚠️ Limitações
+### Recomendações
 
-O sistema não realiza consulta automática em serviços online.
+Para obter previsões mais confiáveis:
+
+* Utilizar vários anos de dados
+* Utilizar múltiplas estações próximas
+* Evitar arquivos com grandes lacunas
+* Utilizar registros completos de temperatura, umidade, pressão e precipitação
+
+---
+
+## ⚠️ Limitações
+
+O sistema não consulta dados online.
 
 Todo o processamento é realizado exclusivamente a partir dos arquivos locais armazenados em:
 
+```text
 data/uploads
+```
 
 Além disso, por requisito do projeto, não são utilizadas bibliotecas externas de Machine Learning ou Estatística.
 
-⚡ Execução Rápida
+---
+
+## ⚡ Execução Rápida
+
+```bash
 cd Projeto_Machine_Learning
 
 mkdir data\uploads
 
 python main.py
+```
 
 Copie os arquivos do INMET para:
 
+```text
 data/uploads
+```
 
-Em seguida:
+Depois:
 
-Execute o sistema;
-Informe a cidade desejada;
-Informe uma data futura;
-Clique em Consultar previsão.
-📜 Licença
+1. Execute o sistema
+2. Informe a cidade desejada
+3. Informe uma data futura
+4. Clique em **Consultar previsão**
+
+---
+
+## 📜 Licença
 
 Este projeto pode ser utilizado para fins acadêmicos, educacionais e de pesquisa climática.
 
-Sinta-se à vontade para adaptar e expandir a solução conforme suas necessidades.
+Sinta-se à vontade para adaptar, modificar e expandir a solução conforme suas necessidades.
